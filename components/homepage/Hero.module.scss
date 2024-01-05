@@ -1,0 +1,152 @@
+@use '@/app/base';
+
+.hero {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	padding: 5rem 0;
+}
+
+.heroVideo {
+	position: absolute;
+	min-height: 100vh;
+	min-width: 100vw;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+.heroContent {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 10%;
+}
+
+.heroPlaceholer {
+	text-align: center;
+	visibility: hidden;
+	height: 120px;
+}
+
+.title {
+	color: white;
+	text-align: center;
+
+	p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.dynamicText {
+	list-style: none;
+	font-family: base.$serif;
+	font-size: 2rem;
+	line-height: 3rem;
+	height: 3rem;
+	overflow: hidden;
+	padding: 0;
+}
+
+.dynamicText li {
+	position: relative;
+	top: 0;
+	animation: slideUp 12.5s steps(5) infinite;
+}
+
+@keyframes slideUp {
+	0% {
+		top: 0;
+	}
+
+	100% {
+		top: -15rem;
+	}
+}
+
+.dynamicText li span {
+	position: relative;
+	color: rgba($color: white, $alpha: 0);
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.dynamicText li span::before {
+	content: attr(data-text);
+	color: white;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 0;
+	overflow: hidden;
+	border-right: 2px solid base.$hks-red;
+	animation: typing 2.5s steps(28) infinite;
+}
+
+@keyframes typing {
+	0% {
+		width: 0;
+		opacity: 1;
+	}
+
+	50%,
+	80% {
+		width: 100%;
+		opacity: 1;
+		color: white;
+	}
+
+	100% {
+		opacity: 0;
+		background-color: base.$hks-red;
+		color: base.$hks-red;
+	}
+}
+
+.tracker {
+	width: 1200px;
+	max-width: 90%;
+	margin: 0 auto;
+	color: white;
+	display: flex;
+
+	p {
+		font-size: 0.8rem;
+		line-height: normal;
+		margin-top: 1rem;
+	}
+
+	.trackerField {
+		flex: 1 0 30%;
+
+		iframe {
+			margin-top: 10px;
+			width: 100%;
+			height: 170px;
+			border: 0;
+		}
+	}
+
+	.trackerField:nth-of-type(1) {
+		padding-right: 20%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.title {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.dynamicText {
+		display: none;
+	}
+}

@@ -1,0 +1,42 @@
+@use '@/app/base';
+
+.tracker {
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 4rem;
+
+	p {
+		font-size: 0.8rem;
+		line-height: normal;
+		margin-top: 1rem;
+	}
+}
+
+.heroReport {
+	grid-column: span 4;
+}
+
+.heroRates {
+	grid-column: 7 / 13;
+
+	iframe {
+		margin-top: 10px;
+		height: 120px;
+		border: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.tracker {
+		display: block;
+	}
+
+	.heroRates {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+}
