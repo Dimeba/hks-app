@@ -46,6 +46,10 @@ footer {
 	}
 }
 
+.section-gray {
+	background-color: base.$hks-gray;
+}
+
 .hidden {
 	display: none !important;
 }
@@ -220,8 +224,6 @@ button {
 }
 
 .rates {
-	background-color: white;
-
 	iframe {
 		width: 100%;
 		height: 600px;

@@ -40,8 +40,6 @@ const Hero = ({ hero }) => {
 			</video>
 
 			<Container newClass={styles.heroContent}>
-				<div className={styles.heroPlaceholer}></div>
-
 				{/* Title, subtitle and services */}
 				<div className={styles.title}>
 					<h1>{hero.fields.title}</h1>

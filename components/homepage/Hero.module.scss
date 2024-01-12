@@ -27,16 +27,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 10%;
-}
-
-.heroPlaceholer {
-	text-align: center;
-	visibility: hidden;
-	height: 120px;
+	gap: 4rem;
 }
 
 .title {
+	margin-top: calc(60px + 2.5rem);
 	color: white;
 	text-align: center;
 
