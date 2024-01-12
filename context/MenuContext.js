@@ -19,16 +19,12 @@ export const MenuContextProvider = ({ children }) => {
 			url: '/investment-opportunities'
 		},
 		{
-			name: 'Notable Transactions',
-			url: '/notable-transactions'
+			name: 'Market Reports',
+			url: '/market-reports'
 		},
 		{
-			name: 'Research',
-			url: '/research'
-		},
-		{
-			name: 'Media',
-			url: '/media'
+			name: 'In The News',
+			url: '/in-the-news'
 		},
 		{
 			name: 'Index Rates',
@@ -36,7 +32,7 @@ export const MenuContextProvider = ({ children }) => {
 		},
 		{
 			name: 'Careers',
-			url: '/careers'
+			url: '/#careers'
 		},
 		{
 			name: 'Contact',

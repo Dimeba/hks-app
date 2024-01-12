@@ -11,6 +11,7 @@
 	"dependencies": {
 		"@contentful/rich-text-react-renderer": "^15.19.0",
 		"contentful": "^10.6.16",
+		"hamburger-react": "^2.5.0",
 		"mapbox-gl": "^3.0.1",
 		"next": "14.0.4",
 		"react": "^18",

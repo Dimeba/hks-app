@@ -5,8 +5,7 @@ import styles from './Footer.module.scss'
 
 // components
 import Link from 'next/link'
-import { BsInstagram } from 'react-icons/bs'
-import { BsLinkedin } from 'react-icons/bs'
+import Image from 'next/image'
 
 // hooks
 import { useContext } from 'react'
@@ -55,7 +54,12 @@ const FooterMenu = ({ contact }) => {
 						href={contact.fields.instagram}
 						aria-label='Link to Instagram Profile'
 					>
-						<BsInstagram color='white' size='24px' />
+						<Image
+							src='/instagram-white.svg'
+							width={24}
+							height={24}
+							alt='instagram'
+						/>
 					</Link>
 
 					<Link
@@ -63,13 +67,18 @@ const FooterMenu = ({ contact }) => {
 						href={contact.fields.linkedIn}
 						aria-label='Link to LinkedIn Profile'
 					>
-						<BsLinkedin color='white' size='24px' />
+						<Image
+							src='/linkedin-white.svg'
+							width={24}
+							height={24}
+							alt='linkedin'
+						/>
 					</Link>
 				</div>
 
 				<div>
 					<ul>
-						<Link href='/privacy/#privacy' scroll={false} passHref>
+						<Link href='/privacy-policy'>
 							<li>Privacy Policy</li>
 						</Link>
 					</ul>

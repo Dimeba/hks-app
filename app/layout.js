@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google'
 import './globals.scss'
 
 // components
+import Header from '@/components/global/Header'
 import Footer from '@/components/global/Footer'
 
 const poppins = Poppins({
@@ -58,6 +59,7 @@ export default async function RootLayout({ children }) {
 
 			<body className={poppins.className}>
 				<MenuContextProvider>
+					<Header contact={contact.items[0]} />
 					{children}
 					<Footer contact={contact.items[0]} />
 				</MenuContextProvider>

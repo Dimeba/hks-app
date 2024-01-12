@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="instagram-white" transform="translate(14643 -1614)">
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="12" cy="12" r="12" transform="translate(-14643 1614)" fill="#fff"/>
+    <g id="Group_554" data-name="Group 554" transform="translate(-14637.465 1619.487)">
+      <path id="Path_228" data-name="Path 228" d="M93.162,203.25H85.8a2.738,2.738,0,0,0-2.763,2.7v7.574a2.728,2.728,0,0,0,2.76,2.7h7.351a2.731,2.731,0,0,0,2.763-2.7h0v-7.574A2.726,2.726,0,0,0,93.162,203.25Zm1.651,10.271a1.6,1.6,0,0,1-1.594,1.6H85.8a1.6,1.6,0,0,1-1.651-1.54v-7.631a1.6,1.6,0,0,1,1.594-1.6h7.408a1.6,1.6,0,0,1,1.651,1.54v.057Z" transform="translate(-83.04 -203.25)" fill="#152348"/>
+      <path id="Path_229" data-name="Path 229" d="M97.168,214.14a3.368,3.368,0,1,0,3.368,3.368,3.369,3.369,0,0,0-3.368-3.368Zm0,5.588a2.251,2.251,0,1,1,2.251-2.251v.031a2.261,2.261,0,0,1-2.251,2.251Z" transform="translate(-90.726 -211.029)" fill="#152348"/>
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="0.791" cy="0.791" rx="0.791" ry="0.791" transform="translate(9.265 2.151)" fill="#152348"/>
+    </g>
+  </g>
+</svg>
