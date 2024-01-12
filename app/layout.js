@@ -1,12 +1,23 @@
 import Script from 'next/script'
+
+// styles & fonts
 import { Poppins } from 'next/font/google'
 import './globals.scss'
+
+// components
+import Footer from '@/components/global/Footer'
 
 const poppins = Poppins({
 	subsets: ['latin'],
 	display: 'swap',
 	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 })
+
+// context
+import { MenuContextProvider } from '@/context/MenuContext'
+
+// contentful
+import { createClient } from 'contentful'
 
 export const metadata = {
 	title: 'HKS Real Estate Advisors',
@@ -16,7 +27,16 @@ export const metadata = {
 	}
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+	const client = createClient({
+		space: process.env.space,
+		accessToken: process.env.accessToken
+	})
+
+	const contact = await client.getEntries({
+		content_type: 'contactSection'
+	})
+
 	return (
 		<html lang='en'>
 			<head>
@@ -36,7 +56,12 @@ export default function RootLayout({ children }) {
 				</Script>
 			</head>
 
-			<body className={poppins.className}>{children}</body>
+			<body className={poppins.className}>
+				<MenuContextProvider>
+					{children}
+					<Footer contact={contact.items[0]} />
+				</MenuContextProvider>
+			</body>
 		</html>
 	)
 }

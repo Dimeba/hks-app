@@ -1,3 +1,5 @@
+'use client'
+
 // styles
 import styles from './Container.module.scss'
 

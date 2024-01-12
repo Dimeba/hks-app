@@ -1,0 +1,78 @@
+@use '@/app/base';
+
+.contact {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 2rem;
+	align-items: center;
+
+	> * {
+		grid-column: span 6;
+	}
+
+	.formContainer {
+		margin: 4rem 0;
+	}
+
+	form {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 1rem;
+
+		input,
+		textarea {
+			border: 1px solid white;
+			background-color: rgba($color: base.$hks-blue, $alpha: 0);
+			padding: 0.5rem;
+			color: white;
+			font-size: 0.8rem;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		input:focus,
+		textarea:focus {
+			background-color: rgba($color: white, $alpha: 0.1);
+		}
+
+		input::placeholder,
+		textarea::placeholder {
+			color: white;
+		}
+
+		input {
+			grid-column: span 6;
+			width: 100%;
+		}
+
+		textarea {
+			grid-column: span 12;
+			height: 6rem;
+		}
+
+		button {
+			grid-column: span 12;
+			width: fit-content;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+	.contact {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		.formContainer {
+			margin: 0;
+		}
+
+		> * {
+			width: 100%;
+		}
+	}
+}

@@ -3,7 +3,8 @@ const nextConfig = {
 	env: {
 		space: process.env.CONTENTFUL_SPACE_ID,
 		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-		googleAnalytics: process.env.GOOGLE_ANALYTICS
+		googleAnalytics: process.env.GOOGLE_ANALYTICS,
+		mapboxToken: process.env.MAPBOX_TOKEN
 	},
 	images: {
 		domains: ['images.ctfassets.net', 'videos.ctfassets.net'],

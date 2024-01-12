@@ -1,0 +1,54 @@
+@use '@/app/base';
+
+.titleContainer {
+	height: fit-content;
+	width: fit-content;
+	position: relative;
+	white-space: nowrap;
+}
+
+//  Animation
+
+.placeholder::before {
+	animation: none;
+}
+
+.animatedTitle::before {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	color: white;
+	overflow: hidden;
+	background-color: base.$hks-red;
+	animation: titleBackground 1s ease-in-out 0.3s;
+}
+
+@keyframes titleBackground {
+	0% {
+		width: 0;
+	}
+
+	50%,
+	70% {
+		width: 100%;
+	}
+
+	100% {
+		width: 0;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+	.titleContainer {
+		margin-left: 0;
+	}
+}
