@@ -37,13 +37,15 @@ const FooterMenu = ({ contact }) => {
 			<div className={styles.doubleColumn}>
 				<p>Site Map</p>
 				<ul>
-					{menu.map(item => (
-						<li key={item.name}>
-							<Link href={item.url} aria-label={item.name}>
-								{item.name}
-							</Link>
-						</li>
-					))}
+					{menu
+						.filter(item => item.name != 'Contact')
+						.map(item => (
+							<li key={item.name}>
+								<Link href={item.url} aria-label={item.name}>
+									{item.name}
+								</Link>
+							</li>
+						))}
 				</ul>
 			</div>
 

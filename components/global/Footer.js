@@ -8,7 +8,7 @@ import FooterMenu from './FooterMenu'
 
 const Footer = ({ contact }) => {
 	return (
-		<footer className={styles.footer}>
+		<footer id='contact' className={styles.footer}>
 			<Container newClass={styles.footerContent}>
 				<Contact contact={contact} />
 				<FooterMenu contact={contact} />

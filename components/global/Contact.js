@@ -12,7 +12,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 
 const Contact = ({ contact }) => {
 	return (
-		<div id='contact' className={styles.contact}>
+		<div className={styles.contact}>
 			<Map
 				initialViewState={{
 					longitude: contact.fields.longitude,

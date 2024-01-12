@@ -11,7 +11,6 @@ export default async function Home() {
 					<iframe
 						id='rates'
 						src='https://www.thefinancials.com/Widget.aspx?pid=HKS&wid=0344406736&style=table_tall_graph'
-						frameborder='0'
 					></iframe>
 				</Container>
 			</section>

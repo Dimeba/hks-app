@@ -36,24 +36,31 @@ const Header = ({ contact }) => {
 					<Hamburger
 						color='#152348'
 						size={24}
-						onToggle={toggled => {
-							if (toggled) {
-								setOpenMenu(true)
-							} else {
-								setOpenMenu(false)
-							}
-						}}
+						toggled={openMenu}
+						toggle={setOpenMenu}
 					/>
 				</div>
 
 				<div className={`${styles.menu} ${!openMenu && styles.hidden}`}>
-					{menu.map(item => (
-						<div key={item.name}>
-							<Link href={item.url} aria-label={item.name}>
-								<p>{item.name}</p>
-							</Link>
-						</div>
-					))}
+					{menu
+						.filter(item => item.name != 'Contact')
+						.map(item => (
+							<div key={item.name}>
+								<Link href={item.url} aria-label={item.name}>
+									<p onClick={() => setOpenMenu(false)}>{item.name}</p>
+								</Link>
+							</div>
+						))}
+
+					{menu
+						.filter(item => item.name == 'Contact')
+						.map(item => (
+							<div key={item.name}>
+								<a href={item.url} aria-label={item.name}>
+									<p onClick={() => setOpenMenu(false)}>{item.name}</p>
+								</a>
+							</div>
+						))}
 				</div>
 
 				<div className={`${styles.socialMedia} ${!openMenu && styles.hidden}`}>
