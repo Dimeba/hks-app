@@ -6,3 +6,10 @@
 	margin-bottom: 2rem;
 	grid-column: span 12;
 }
+
+@media screen and (max-width: 768px) {
+	.filter {
+		justify-content: flex-start;
+		margin-bottom: 1rem;
+	}
+}

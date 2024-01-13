@@ -1,0 +1,59 @@
+@use '@/app/base';
+
+.reports {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.report {
+	border-bottom: 1px solid base.$hks-dark-gray;
+	padding-bottom: 2rem;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 2rem;
+	align-items: center;
+}
+
+.report:last-of-type {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.image {
+	grid-column: span 3;
+	aspect-ratio: 16 / 12;
+	background-color: white;
+}
+
+.content {
+	grid-column: span 9;
+
+	h4 {
+		text-wrap: balance;
+	}
+
+	p {
+		font-size: 0.8rem;
+		margin-bottom: 1rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.report {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.image {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.image {
+		aspect-ratio: 16 / 12;
+	}
+}
