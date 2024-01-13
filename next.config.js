@@ -7,7 +7,19 @@ const nextConfig = {
 		mapboxToken: process.env.MAPBOX_TOKEN
 	},
 	images: {
-		domains: ['images.ctfassets.net', 'videos.ctfassets.net'],
+		// domains: ['images.ctfassets.net', 'videos.ctfassets.net'],
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'images.ctfassets.net',
+				pathname: '**'
+			},
+			{
+				protocol: 'https',
+				hostname: 'downloads.ctfassets.net',
+				pathname: '**'
+			}
+		],
 		formats: ['image/avif', 'image/webp'],
 		deviceSizes: [640, 768, 1024, 1280, 1600]
 		// imageSizes: [16, 32, 48, 64, 96]

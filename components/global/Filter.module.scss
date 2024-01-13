@@ -1,0 +1,8 @@
+@use '@/app/base';
+
+.filter {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+	grid-column: span 12;
+}

@@ -5,6 +5,15 @@
 	width: fit-content;
 	position: relative;
 	white-space: nowrap;
+
+	* {
+		text-align: center;
+	}
+}
+
+.subtitle {
+	text-align: center;
+	margin-bottom: 5rem;
 }
 
 //  Animation

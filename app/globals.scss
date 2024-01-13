@@ -27,10 +27,6 @@ footer {
 	padding-bottom: 10rem;
 	overflow: hidden;
 	scroll-snap-align: center;
-
-	* {
-		transition: 0.3s ease;
-	}
 }
 
 ::selection {
@@ -99,6 +95,7 @@ h4 {
 	@extend %serif-titles;
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
+	line-height: 1.5;
 }
 
 .italic {
@@ -115,6 +112,7 @@ button {
 	margin-top: 0.5rem;
 	color: white;
 	cursor: pointer;
+	transition: 0.3s ease;
 }
 
 .buttonBlue {

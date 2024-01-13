@@ -6,25 +6,28 @@ import styles from './SectionTitle.module.scss'
 // hooks
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 
-const SectionTitle = ({ text, white, left }) => {
+const SectionTitle = ({ text, white, left, subtitle }) => {
 	const [targetRef, isIntersecting] = useIntersectionObserver()
 
 	return (
-		<div
-			ref={targetRef}
-			className={styles.titleContainer}
-			style={{ margin: left ? '0 0 2rem 0' : '0 auto 2rem auto' }}
-		>
-			<h2
-				data-text={text}
-				className={isIntersecting ? styles.animatedTitle : styles.placeholder}
-				style={{
-					color: white ? 'white' : ''
-				}}
+		<>
+			<div
+				ref={targetRef}
+				className={styles.titleContainer}
+				style={{ margin: left ? '0 0 2rem 0' : '0 auto 2rem auto' }}
 			>
-				{text}
-			</h2>
-		</div>
+				<h2
+					data-text={text}
+					className={isIntersecting ? styles.animatedTitle : styles.placeholder}
+					style={{
+						color: white ? 'white' : ''
+					}}
+				>
+					{text}
+				</h2>
+			</div>
+			{subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+		</>
 	)
 }
 

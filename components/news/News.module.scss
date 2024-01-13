@@ -1,0 +1,34 @@
+@use '@/app/base';
+
+.news {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 2rem;
+}
+
+.article {
+	grid-column: span 3;
+
+	h4:hover {
+		text-decoration: underline;
+	}
+}
+
+.image {
+	width: 100%;
+	aspect-ratio: 16/10;
+	margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+	.article {
+		grid-column: span 6;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.article {
+		grid-column: span 12;
+		max-width: 80vw;
+	}
+}
