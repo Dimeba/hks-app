@@ -125,13 +125,13 @@ button {
 }
 
 .buttonBlue:hover {
-	background-color: white !important;
+	background-color: transparent;
 	border: 1px solid base.$hks-blue;
 	color: base.$hks-blue;
 }
 
 .buttonRed:hover {
-	background-color: white !important;
+	background-color: transparent;
 	border: 1px solid base.$hks-red;
 	color: base.$hks-red;
 }

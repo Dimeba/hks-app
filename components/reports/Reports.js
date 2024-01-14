@@ -17,7 +17,10 @@ const Reports = ({ reports }) => {
 
 	return (
 		<div className={styles.reports}>
+			{/* Filter */}
 			<Filter values={years} setOptionValue={setOption} placeholder='Year' />
+
+			{/* Reports */}
 			{reports
 				.filter(report => (option ? report.fields.year == option : report))
 				.map(report => (
