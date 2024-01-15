@@ -6,7 +6,7 @@ import Container from '@/components/global/Container'
 import SectionTitle from '@/components/global/SectionTitle'
 import News from '@/components/news/News'
 
-export default async function Home() {
+export default async function InTheNews() {
 	const client = createClient({
 		space: process.env.space,
 		accessToken: process.env.accessToken

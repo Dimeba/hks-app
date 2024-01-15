@@ -28,6 +28,12 @@
 	}
 }
 
+@media screen and (max-width: 1440px) {
+	.heroRates {
+		grid-column: 6 / 13;
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	.tracker {
 		display: block;

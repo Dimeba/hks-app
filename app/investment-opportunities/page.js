@@ -6,7 +6,7 @@ import Container from '@/components/global/Container'
 import SectionTitle from '@/components/global/SectionTitle'
 import Investments from '@/components/investments/Investments'
 
-export default async function Home() {
+export default async function InvestmentOpportunities() {
 	const client = createClient({
 		space: process.env.space,
 		accessToken: process.env.accessToken

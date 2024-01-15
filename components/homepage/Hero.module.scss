@@ -5,8 +5,8 @@
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	height: calc(100vh - 60px - 2.5rem);
-	min-height: max-content;
+	min-height: calc(100vh - 60px - 2.5rem);
+	height: fit-content;
 	overflow: hidden;
 	padding: 5rem 0;
 }
@@ -27,7 +27,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 4rem;
+	gap: 20vh;
 }
 
 .title {
@@ -108,9 +108,6 @@
 }
 
 .tracker {
-	width: 1200px;
-	max-width: 90%;
-	margin: 0 auto;
 	color: white;
 	display: flex;
 
@@ -137,7 +134,12 @@
 }
 
 @media screen and (max-width: 1200px) {
+	.heroContent {
+		gap: 4rem;
+	}
+
 	.title {
+		margin-top: 0;
 		margin-bottom: 0;
 	}
 }

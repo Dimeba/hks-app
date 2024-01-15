@@ -2,7 +2,7 @@
 import Container from '@/components/global/Container'
 import SectionTitle from '@/components/global/SectionTitle'
 
-export default async function Home() {
+export default async function IndexRates() {
 	return (
 		<main>
 			<section className='section-gray'>

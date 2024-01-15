@@ -6,7 +6,7 @@ import Container from '@/components/global/Container'
 import SectionTitle from '@/components/global/SectionTitle'
 import Reports from '@/components/reports/Reports'
 
-export default async function Home() {
+export default async function MarketReports() {
 	const client = createClient({
 		space: process.env.space,
 		accessToken: process.env.accessToken
