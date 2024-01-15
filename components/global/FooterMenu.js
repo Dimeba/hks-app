@@ -41,9 +41,9 @@ const FooterMenu = ({ contact }) => {
 						.filter(item => item.name != 'Contact')
 						.map(item => (
 							<li key={item.name}>
-								<Link href={item.url} aria-label={item.name}>
+								<a href={item.url} aria-label={item.name}>
 									{item.name}
-								</Link>
+								</a>
 							</li>
 						))}
 				</ul>

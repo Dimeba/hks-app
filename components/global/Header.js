@@ -43,7 +43,7 @@ const Header = ({ contact }) => {
 
 				<div className={`${styles.menu} ${!openMenu && styles.hidden}`}>
 					{menu
-						.filter(item => item.name != 'Contact')
+						.filter(item => item.name != 'Careers' && item.name != 'Contact')
 						.map(item => (
 							<div key={item.name}>
 								<Link href={item.url} aria-label={item.name}>
@@ -53,7 +53,7 @@ const Header = ({ contact }) => {
 						))}
 
 					{menu
-						.filter(item => item.name == 'Contact')
+						.filter(item => item.name == 'Careers' || item.name == 'Contact')
 						.map(item => (
 							<div key={item.name}>
 								<a href={item.url} aria-label={item.name}>
