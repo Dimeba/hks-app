@@ -45,10 +45,15 @@ const Header = ({ contact }) => {
 					{menu
 						.filter(item => item.name != 'Careers' && item.name != 'Contact')
 						.map(item => (
-							<div key={item.name}>
+							<div className={styles.menuItem} key={item.name}>
 								<Link href={item.url} aria-label={item.name}>
 									<p onClick={() => setOpenMenu(false)}>{item.name}</p>
 								</Link>
+								{item.dropdown && (
+									<div className={styles.dropdown}>
+										<a href={item.dropdownUrl}>{item.dropdown}</a>
+									</div>
+								)}
 							</div>
 						))}
 

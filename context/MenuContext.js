@@ -12,11 +12,15 @@ export const MenuContextProvider = ({ children }) => {
 	const menu = [
 		{
 			name: 'About',
-			url: '/about'
+			url: '/about',
+			dropdown: 'Met Our Team',
+			dropdownUrl: '/about#meet-our-team'
 		},
 		{
 			name: 'Investment Opportunities',
-			url: '/investment-opportunities'
+			url: '/investment-opportunities',
+			dropdown: 'Notable Transactions',
+			dropdownUrl: '/investment-opportunities#notable-transactions'
 		},
 		{
 			name: 'Market Reports',

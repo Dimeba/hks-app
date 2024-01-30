@@ -33,7 +33,11 @@ export default async function Home() {
 		<main>
 			<Hero hero={hero.items[0]} />
 			<About about={about.items[0]} />
-			<Transactions transactions={transactions.items[0]} />
+			<Transactions
+				transactions={transactions.items[0]}
+				grayBackground
+				showFilters
+			/>
 			<Careers careers={careers.items[0]} />
 		</main>
 	)

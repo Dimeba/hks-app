@@ -13,55 +13,64 @@ import ImageContainer from '../global/ImageContainer'
 // hooks
 import { useState } from 'react'
 
-const Transactions = ({ transactions }) => {
+const Transactions = ({ transactions, grayBackground, showFilters }) => {
 	const [option, setOption] = useState(transactions.fields.investment)
 
 	return (
-		<section className='section-gray'>
+		<section
+			id='notable-transactions'
+			className={grayBackground ? 'section-gray' : ''}
+		>
 			<Container>
-				<SectionTitle text={transactions.fields.title} />
+				<SectionTitle
+					text={transactions.fields.title}
+					subtitle={!showFilters ? transactions.fields.description : null}
+				/>
 
-				<div className={styles.filters}>
-					{/* Investment Button */}
-					<div className={styles.buttons}>
-						<div onClick={() => setOption(transactions.fields.investment)}>
-							{option == transactions.fields.investment ? (
-								<BiMinus color='#e63122' size='24px' />
-							) : (
-								<BiPlus color='#e63122' size='24px' />
-							)}
-							<h4
-								style={{
-									fontWeight:
-										option == transactions.fields.investment ? '700' : ''
-								}}
-							>
-								Investment Sales
-							</h4>
+				{showFilters && (
+					<div className={styles.filters}>
+						{/* Investment Button */}
+						<div className={styles.buttons}>
+							<div onClick={() => setOption(transactions.fields.investment)}>
+								{option == transactions.fields.investment ? (
+									<BiMinus color='#e63122' size='24px' />
+								) : (
+									<BiPlus color='#e63122' size='24px' />
+								)}
+								<h4
+									style={{
+										fontWeight:
+											option == transactions.fields.investment ? '700' : ''
+									}}
+								>
+									Investment Sales
+								</h4>
+							</div>
+
+							{/* Capital Button */}
+							<div onClick={() => setOption(transactions.fields.capital)}>
+								{option == transactions.fields.capital ? (
+									<BiMinus color='#e63122' size='24px' />
+								) : (
+									<BiPlus color='#e63122' size='24px' />
+								)}
+								<h4
+									style={{
+										fontWeight:
+											option == transactions.fields.capital ? '700' : ''
+									}}
+								>
+									Capital Advisory
+								</h4>
+							</div>
 						</div>
 
-						{/* Capital Button */}
-						<div onClick={() => setOption(transactions.fields.capital)}>
-							{option == transactions.fields.capital ? (
-								<BiMinus color='#e63122' size='24px' />
-							) : (
-								<BiPlus color='#e63122' size='24px' />
-							)}
-							<h4
-								style={{
-									fontWeight: option == transactions.fields.capital ? '700' : ''
-								}}
-							>
-								Capital Advisory
-							</h4>
-						</div>
+						{/* Description */}
+						<p className={styles.description}>
+							{transactions.fields.description}
+						</p>
 					</div>
-
-					{/* Description */}
-					<p className={styles.description}>
-						{transactions.fields.description}
-					</p>
-				</div>
+				)}
 
 				{/* Transactions */}
 				<div className={styles.transactions}>

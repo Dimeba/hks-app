@@ -5,6 +5,7 @@ import { createClient } from 'contentful'
 import Container from '@/components/global/Container'
 import SectionTitle from '@/components/global/SectionTitle'
 import Investments from '@/components/investments/Investments'
+import Transactions from '@/components/homepage/Transactions'
 
 export default async function InvestmentOpportunities() {
 	const client = createClient({
@@ -14,6 +15,10 @@ export default async function InvestmentOpportunities() {
 
 	const investments = await client.getEntries({
 		content_type: 'investmentsSection'
+	})
+
+	const transactions = await client.getEntries({
+		content_type: 'notableTransactionsSection'
 	})
 
 	return (
@@ -27,6 +32,8 @@ export default async function InvestmentOpportunities() {
 					<Investments investments={investments.items[0].fields.investments} />
 				</Container>
 			</section>
+
+			<Transactions transactions={transactions.items[0]} />
 		</main>
 	)
 }

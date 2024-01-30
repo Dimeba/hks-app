@@ -32,7 +32,7 @@ export default async function About() {
 			</section>
 
 			{/* Team */}
-			<section>
+			<section id='meet-our-team'>
 				<Container>
 					<SectionTitle text={team.items[0].fields.title} />
 					<Team team={team.items[0].fields.team} />

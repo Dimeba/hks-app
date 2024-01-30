@@ -58,6 +58,31 @@
 	}
 }
 
+.menuItem {
+	position: relative;
+}
+
+.menuItem:hover {
+	.dropdown {
+		display: block;
+	}
+}
+
+.dropdown {
+	position: absolute;
+	bottom: -1.6rem;
+	left: 50%;
+	transform: translateX(calc(-50% - 12px));
+	width: max-content;
+	display: none;
+
+	a {
+		font-size: 0.8rem;
+		color: rgba($color: base.$hks-blue, $alpha: 0.75);
+		font-style: italic;
+	}
+}
+
 .socialMedia {
 	display: flex;
 	gap: 0.5rem;
@@ -89,6 +114,12 @@
 		div:last-of-type {
 			padding-bottom: 0;
 			border-bottom: none;
+		}
+	}
+
+	.menuItem:hover {
+		.dropdown {
+			display: none;
 		}
 	}
 }
