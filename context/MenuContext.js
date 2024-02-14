@@ -13,7 +13,7 @@ export const MenuContextProvider = ({ children }) => {
 		{
 			name: 'About',
 			url: '/about',
-			dropdown: 'Met Our Team',
+			dropdown: 'Meet Our Team',
 			dropdownUrl: '/about#meet-our-team'
 		},
 		{
