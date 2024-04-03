@@ -73,18 +73,6 @@ const Investments = ({ investments }) => {
 								</Link>
 							)}
 
-							{/* Confidential / Broker */}
-							{investment.fields.confiBroker && (
-								<Link
-									href={
-										'https:' + investment.fields.confiBroker.fields.file.url
-									}
-									target='_blank'
-								>
-									<button className='buttonRed'>Broker</button>
-								</Link>
-							)}
-
 							{/* Confidential / Principal */}
 							{investment.fields.confiPrincipal && (
 								<Link
@@ -94,6 +82,18 @@ const Investments = ({ investments }) => {
 									target='_blank'
 								>
 									<button className='buttonRed'>Principal</button>
+								</Link>
+							)}
+
+							{/* Confidential / Broker */}
+							{investment.fields.confiBroker && (
+								<Link
+									href={
+										'https:' + investment.fields.confiBroker.fields.file.url
+									}
+									target='_blank'
+								>
+									<button className='buttonRed'>Co-Broke</button>
 								</Link>
 							)}
 						</div>
