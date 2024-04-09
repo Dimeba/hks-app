@@ -40,6 +40,17 @@
 	}
 }
 
+.desktopBanner {
+	width: 100%;
+	aspect-ratio: 16 / 4;
+}
+
+.mobileBanner {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	display: none;
+}
+
 @media screen and (max-width: 1024px) {
 	.careersContainer {
 		display: flex;
@@ -49,4 +60,11 @@
 }
 
 @media screen and (max-width: 768px) {
+	.desktopBanner {
+		display: none;
+	}
+
+	.mobileBanner {
+		display: block;
+	}
 }
